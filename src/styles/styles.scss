@@ -1,7 +1,7 @@
 // Variables
-$primary-color: #84a7b4;
-$secondary-color: #3b3b3b;
-$white: #fff;
+$color-primary: #84a7b4;
+$color-secondary: #3b3b3b;
+$color-white: #fff;
 
 $font-big: 4rem;
 $font-medium: 2rem;
@@ -12,26 +12,67 @@ $margin-big: 8rem;
 $margin-medium: 4rem;
 $margin-small: 2rem;
 
-.u-center-text {
-  text-align: center !important;
+//Navbar
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-size: $font-small;
+  padding: 2rem;
+
+  &__logo {
+  }
+
+  &__pages {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+
+  &__gallery {
+    &:hover {
+      .navbar__dropdown {
+        display: block;
+      }
+    }
+  }
+
+  &__dropdown {
+    display: none;
+    position: absolute;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__dropdown-item {
+    margin-top: 1rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-secondary;
+    margin-right: 2rem;
+    position: relative;
+  }
+
+  &__socials {
+    svg {
+      margin-left: 2rem;
+    }
+  }
 }
 
-.u-margin-top-huge {
-  margin-top: $margin-huge !important;
-}
+//Homepage
+.home-grid {
+  height: 50vh;
 
-.u-margin-top-big {
-  margin-top: $margin-big !important;
-}
+  &__item {
+    background: $color-primary;
+  }
 
-.u-margin-bottom-big {
-  margin-bottom: $margin-big !important;
-}
-
-.u-margin-bottom-medium {
-  margin-bottom: $margin-medium !important;
-}
-
-.u-margin-bottom-small {
-  margin-bottom: $margin-small !important;
+  &__link {
+    text-decoration: none;
+    color: $color-white;
+  }
 }
