@@ -25,7 +25,9 @@ const Layout = ({ children }) => {
   return (
     <> 
         <Navbar />
-        <main>{children}</main>
+        <main className="global-grid">
+          {children}
+        </main>
         <footer
           style={{
             marginTop: `2rem`,
