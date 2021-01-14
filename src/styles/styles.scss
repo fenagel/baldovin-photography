@@ -6,6 +6,7 @@ $color-white: #fff;
 $font-big: 4rem;
 $font-medium: 2rem;
 $font-small: 1.6rem;
+$font-extra-small: 1.2rem;
 
 $margin-huge: 10rem;
 $margin-big: 8rem;
@@ -24,10 +25,14 @@ $margin-small: 2rem;
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: $font-small;
-  padding: 2rem;
+  padding: 2.5rem;
+  padding-bottom: 1rem;
 
   &__logo {
+    font-size: $font-medium;
+    color: $color-secondary;
   }
 
   &__pages {
@@ -49,12 +54,15 @@ $margin-small: 2rem;
     position: absolute;
     list-style: none;
     padding-left: 0;
-    margin-top: 0;
     margin-bottom: 0;
+    text-transform: none;
+    background: $color-white;
+    border-top: 1px solid $color-primary;
+    z-index: 2;
   }
 
   &__dropdown-item {
-    margin-top: 1rem;
+    margin: 1rem;
   }
 
   &__link {
@@ -62,11 +70,21 @@ $margin-small: 2rem;
     color: $color-secondary;
     margin-right: 2rem;
     position: relative;
-  }
+
+    &:hover{
+      color: $color-primary;
+    }
+  } 
 
   &__socials {
-    svg {
+    a {
       margin-left: 2rem;
+      font-size: $font-small;
+      color: $color-secondary;
+
+      &:hover {
+        color: $color-primary;
+      }
     }
   }
 }
@@ -92,5 +110,54 @@ $margin-small: 2rem;
   &__link {
     text-decoration: none;
     color: $color-white;
+  }
+}
+
+//About Page
+
+.about-border {
+  border-top: 1px solid $color-secondary;
+  grid-column: main-start/main-end;
+  opacity: 0.4;
+}
+.about-title {
+  grid-column: center-start/center-end;
+  margin-top: 4rem;
+  text-align: center;
+  color: $color-secondary;
+  font-size: $font-big;
+}
+
+hr {
+  grid-column: center-start/center-end;
+  width: 8rem;
+  text-align: center;
+}
+.about-grid {
+  margin-top: 5rem;
+  height: 50vh;
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+
+  &__img {
+    background: url('../images/Pia-profile.jpg');
+    background-size: cover;
+    text-align: center;
+    height: 100%;
+    width: 80%;
+    justify-self: center;
+
+  }
+
+  &__content {
+    color: $color-secondary;
+    font-size: $font-small;
+    align-self: flex-start;
+    width: 80%;
+    line-height: 3rem;
+    justify-self: center;
   }
 }

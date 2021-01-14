@@ -28,12 +28,8 @@ const Layout = ({ children }) => {
         <main className="global-grid">
           {children}
         </main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          Copyright © {new Date().getFullYear()}, all rights reserved.
+        <footer>
+          Copyright © {new Date().getFullYear()} All rights reserved.
         </footer>
     </>
   )
