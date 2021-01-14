@@ -16,8 +16,8 @@ $margin-small: 2rem;
 .global-grid {
   display: grid;
   grid-template-columns:
-    [main-start] minmax(10rem, 1fr) [center-start] minmax(40rem, max-content)
-    minmax(40rem, max-content) [center-end] minmax(10rem, 1fr) [main-end];
+    [main-start] minmax(7.5rem, 1fr) [center-start] minmax(50rem, max-content)
+    minmax(50rem, max-content) [center-end] minmax(7.5rem, 1fr) [main-end];
 }
 
 //Navbar
@@ -73,10 +73,11 @@ $margin-small: 2rem;
 
 //Homepage
 .home-grid {
-  height: 50vh;
   grid-column: center-start/center-end;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-top: $margin-medium;
+  margin-bottom: $margin-big;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
   justify-items: center;
@@ -87,6 +88,25 @@ $margin-small: 2rem;
     text-align: center;
     height: 100%;
     width: 100%;
+    position: relative;
+
+    &:hover {
+      h2 {
+        display: none;
+      }
+    }
+
+    &--text {
+      position: absolute;
+      font-size: $font-big;
+      text-shadow: 1px 1px 1px $color-secondary;
+      z-index: 5;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $color-white;
+      cursor: pointer;
+    }
   }
 
   &__link {
