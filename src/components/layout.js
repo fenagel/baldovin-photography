@@ -10,6 +10,13 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import "../styles/layout.scss"
 import Navbar from '../components/navbar'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from "@fortawesome/free-solid-svg-icons"
+
+library.add(fab, far, fas)
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,8 +35,16 @@ const Layout = ({ children }) => {
         <main className="global-grid">
           {children}
         </main>
-        <footer>
-          Copyright © {new Date().getFullYear()} All rights reserved.
+        <footer className="footer">
+          <div className="footer__socials">
+            <a href="#" className="footer__social">
+              <FontAwesomeIcon icon={["fab", 'instagram']} />
+            </a>
+            <a href="#" className="footer__social">
+              <FontAwesomeIcon icon={["far", 'envelope']} />
+            </a>
+          </div>
+          <div className="footer__copyright">Copyright © {new Date().getFullYear()} All rights reserved.</div>
         </footer>
     </>
   )

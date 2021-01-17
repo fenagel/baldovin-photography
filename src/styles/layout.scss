@@ -35,6 +35,7 @@ dd {
 
 html {
   font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+  background-color: #ECE8E8;
 }
 
 body {
@@ -43,10 +44,6 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: "Josefin Sans", sans-serif;
-}
-
-p {
-  font-family: "Montserrat", sans-serif;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -81,10 +78,28 @@ select {
 
 // Footer 
 
-footer {
-  margin: 2rem;
-  margin-top: 6rem;
-  font-size: 1.2rem;
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+
+  &__socials {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    a {
+      font-size: 2rem;
+      margin: 1rem;
+      color: #3b3b3b;
+
+      &:hover {
+        color: #84a7b4;
+      }
+    }
+  }
 }
-
-

@@ -2,6 +2,7 @@
 $color-primary: #84a7b4;
 $color-secondary: #3b3b3b;
 $color-white: #fff;
+$color-beige: #ECE8E8;
 
 $font-big: 4rem;
 $font-medium: 2rem;
@@ -24,27 +25,27 @@ $margin-small: 2rem;
 //Navbar
 .navbar {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   font-size: $font-small;
-  padding: 2.5rem;
   padding-bottom: 1rem;
+  padding: 2rem;
 
   &__logo {
-    font-size: $font-medium;
-    color: $color-secondary;
+    width: 42rem;
   }
 
   &__pages {
     display: flex;
     justify-content: center;
-    text-transform: uppercase;
   }
 
   &__gallery {
     &:hover {
       .navbar__dropdown {
         display: block;
+        margin-left: -2rem;
       }
     }
   }
@@ -55,14 +56,13 @@ $margin-small: 2rem;
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
-    text-transform: none;
-    background: $color-white;
+    background: $color-beige;
     border-top: 1px solid $color-primary;
     z-index: 2;
   }
 
   &__dropdown-item {
-    margin: 1rem;
+    margin: 2rem;
   }
 
   &__link {
@@ -75,18 +75,6 @@ $margin-small: 2rem;
       color: $color-primary;
     }
   } 
-
-  &__socials {
-    a {
-      margin-left: 2rem;
-      font-size: $font-small;
-      color: $color-secondary;
-
-      &:hover {
-        color: $color-primary;
-      }
-    }
-  }
 }
 
 //Homepage
@@ -167,7 +155,7 @@ hr {
     background-size: cover;
     text-align: center;
     height: 100%;
-    width: 80%;
+    width: 90%;
     justify-self: center;
 
   }
@@ -179,5 +167,6 @@ hr {
     width: 80%;
     line-height: 3rem;
     justify-self: center;
+    font-weight: 300;
   }
 }
