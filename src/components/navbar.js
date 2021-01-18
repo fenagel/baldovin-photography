@@ -1,11 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link} from "gatsby"
 import '../styles/styles.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from "@fortawesome/free-solid-svg-icons"
+import logo from '../images/logo.png'
 
 library.add(fab, far, fas)
 
@@ -14,9 +15,7 @@ library.add(fab, far, fas)
 
 const Navbar = () => (
   <nav className="navbar">
-    <div className="navbar__logo">
-      <h3>Baldovin</h3>
-    </div>
+    <img src={logo} alt="logo" className="navbar__logo"/>
     <div className="navbar__pages">
       <Link to="/" className="navbar__link">Home</Link>
       <div className="navbar__gallery">
@@ -36,15 +35,7 @@ const Navbar = () => (
           </li>
         </ul>
       </div>
-      <Link to="about" className="navbar__link">About</Link>
-    </div>
-    <div className="navbar__socials">
-      <a href="#" className="navbar__social">
-        <FontAwesomeIcon icon={["fab", 'instagram']} />
-      </a>
-      <a href="#" className="navbar__social">
-        <FontAwesomeIcon icon={["far", 'envelope']} />
-      </a>
+      <Link to="/about" className="navbar__link">About</Link>
     </div>
   </nav>
 
