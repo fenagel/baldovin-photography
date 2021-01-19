@@ -35,7 +35,7 @@ dd {
 
 html {
   font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
-  background-color: #ECE8E8;
+  background: rgb(248, 248, 255);
 }
 
 body {
@@ -76,7 +76,7 @@ select {
   font: inherit;
 }
 
-// Footer 
+// Footer
 
 .footer {
   display: flex;
