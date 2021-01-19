@@ -233,3 +233,121 @@ $margin-small: 2rem;
     grid-row: 13 / span 2;
   }
 }
+
+//People
+
+.people-header {
+  grid-column: main-start/main-end;
+  font-size: $font-big;
+  text-align: center;
+  margin-bottom: $margin-medium;
+}
+
+.people-grid {
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(19, 1fr);
+  grid-gap: 1.5rem;
+
+  &__picture-1 {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+  }
+  &__picture-2 {
+    grid-column: 4 / span 3;
+    grid-row: 1 / span 2;
+  }
+  &__picture-3 {
+    grid-column: 7 / span 3;
+    grid-row: 1 / span 2;
+  }
+  &__picture-4 {
+    grid-column: 1 / span 5;
+    grid-row: 3 / span 2;
+  }
+  &__picture-5 {
+    grid-column: 6 / span 4;
+    grid-row: 3 / span 2;
+  }
+  &__picture-6 {
+    grid-column: 1 / span 4;
+    grid-row: 5 / span 2;
+  }
+  &__picture-7 {
+    grid-column: 5 / span 5;
+    grid-row: 5 / span 2;
+  }
+  &__picture-8 {
+    grid-column: 1 / span 5;
+    grid-row: 7 / span 2;
+  }
+  &__picture-9 {
+    grid-column: 6 / span 4;
+    grid-row: 7 / span 2;
+  }
+  &__picture-10 {
+    grid-column: 1 / span 3;
+    grid-row: 9 / span 2;
+  }
+  &__picture-11 {
+    grid-column: 4 / span 3;
+    grid-row: 9 / span 2;
+  }
+  &__picture-12 {
+    grid-column: 7 / span 3;
+    grid-row: 9 / span 2;
+  }
+  &__picture-13 {
+    grid-column: 1 / span 3;
+    grid-row: 11 / span 2;
+  }
+  &__picture-14 {
+    grid-column: 4 / span 3;
+    grid-row: 11 / span 2;
+  }
+  &__picture-15 {
+    grid-column: 7 / span 3;
+    grid-row: 11 / span 2;
+  }
+  &__picture-16 {
+    grid-column: 1 / span 5;
+    grid-row: 13 / span 2;
+  }
+  &__picture-17 {
+    grid-column: 6 / span 4;
+    grid-row: 13 / span 2;
+  }
+  &__picture-18 {
+    grid-column: 1 / span 4;
+    grid-row: 15 / span 2;
+  }
+  &__picture-19 {
+    grid-column: 5 / span 5;
+    grid-row: 15 / span 2;
+  }
+  &__picture-20 {
+    grid-column: 1 / span 3;
+    grid-row: 17 / span 2;
+  }
+  &__picture-21 {
+    grid-column: 4 / span 3;
+    grid-row: 17 / span 2;
+  }
+  &__picture-22 {
+    grid-column: 7 / span 3;
+    grid-row: 17 / span 2;
+  }
+  &__picture-23 {
+    grid-column: 1 / span 3;
+    grid-row: 19 / span 2;
+  }
+  &__picture-24 {
+    grid-column: 4 / span 3;
+    grid-row: 19 / span 2;
+  }
+  &__picture-25 {
+    grid-column: 7 / span 3;
+    grid-row: 19 / span 2;
+  }
+}
