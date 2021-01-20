@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 const LandscapePage = (props) => (
   <Layout>
     <SEO title="Landscape" />
-    <h1 className="landscape-header">
+    <h1 className="page-header">
       Landscape
     </h1>
     <section className="landscape-grid">

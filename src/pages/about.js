@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
+    <h1 className="page-header">About Me</h1>
     <section className="about-grid">
       <div className="about-grid__img">
       </div>

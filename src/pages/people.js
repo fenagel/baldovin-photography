@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 const PeoplePage = (props) => (
   <Layout>
     <SEO title="People" />
-    <h1 className="people-header">
+    <h1 className="page-header">
       People
     </h1>
     <section className="people-grid">
