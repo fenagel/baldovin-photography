@@ -12,6 +12,34 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `people`,
+        path: `${__dirname}/src/people`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `nature`,
+        path: `${__dirname}/src/nature`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `landscape`,
+        path: `${__dirname}/src/landscape`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `urban`,
+        path: `${__dirname}/src/urban`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
