@@ -8,15 +8,15 @@ const Gallery = ({usegallery}) => {
     return (
         <div className="gallery">
             {images.map(({ id, fluid }) => (
-              <Img
-                key={id}
-                fluid={fluid}
-                imgStyle={{
-                  objectFit: "cover",
-                  objectPosition: "50% 50%",
-                }} 
-              />
-          ))}
+                <Img
+                  key={id}
+                  fluid={fluid}
+                  imgStyle={{
+                    objectFit: "fill",
+                    objectPosition: "50% 50%",
+                  }} 
+                />
+            ))}
         </div>
     )
 }
