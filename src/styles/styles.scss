@@ -18,7 +18,7 @@ $margin-small: 2rem;
 .global-grid {
   display: grid;
   grid-template-columns:
-    [main-start] minmax(7.5rem, 1fr) [center-start] minmax(50rem, max-content)
+    [main-start] minmax(5rem, 1fr) [center-start] minmax(60rem, max-content)
     minmax(50rem, max-content) [center-end] minmax(7.5rem, 1fr) [main-end];
 }
 
@@ -125,6 +125,40 @@ $margin-small: 2rem;
   }
 }
 
+
+//About Page
+
+.about-grid {
+  margin-top: $margin-medium;
+  margin-bottom: $margin-big;
+  display: grid;
+  grid-column: center-start/center-end;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+
+  &__img {
+    background: url("../images/profile.jpg");
+    background-size: cover;
+    text-align: center;
+    height: 100%;
+    width: 80%;
+    justify-self: center;
+    background-position: center;
+  }
+  &__content {
+    color: $color-secondary;
+    font-size: $font-small;
+    align-self: flex-start;
+    line-height: 3rem;
+    justify-self: center;
+    font-weight: 300;
+    height: 100%;
+    width: 80%;
+  }
+}
+
 // Gallery
 .gallery {
   grid-column: center-start / center-end;
@@ -157,4 +191,28 @@ $margin-small: 2rem;
   font-size: $font-big;
   text-align: center;
   margin-bottom: $margin-medium;
+}
+
+
+//People	
+
+.page-grid {
+  display: grid;
+  grid-column: center-start/center-end;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: $margin-medium;
+  margin-bottom: $margin-big;
+  grid-gap: 1rem;
+  justify-items: center;
+  align-items: center;
+
+  &__small {
+    height: 100%;
+    width: 100%;
+  }
+  &__big {
+    grid-column: span 2;
+    height: 100%;
+    width: 100%;
+  }
 }

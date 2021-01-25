@@ -18,8 +18,8 @@ const IndexPage = (props) => (
             objectPosition="50% 50%"
             alt=""
           />
-          </Link>
-          <h2 className="home-grid__item--text">People</h2>
+        </Link>
+        <h2 className="home-grid__item--text">People</h2>
       </div>
 
       <div className="home-grid__item">
@@ -30,8 +30,8 @@ const IndexPage = (props) => (
             objectPosition="50% 50%"
             alt=""
           />
-          </Link>
-          <h2 className="home-grid__item--text">Urban</h2>
+        </Link>
+        <h2 className="home-grid__item--text">Urban</h2>
       </div>
 
       <div className="home-grid__item">
@@ -77,16 +77,16 @@ fragment fluidImage on File {
 
 export const pageQuery = graphql`
   query {
-    imagePeople: file(relativePath: { eq: "Dana-sister.jpg" }) {
+    imagePeople: file(relativePath: { eq: "home-people.jpg" }) {
       ...fluidImage
     }
-    imageNature: file(relativePath: { eq: "DSC_0142.jpg" }) {
+    imageNature: file(relativePath: { eq: "home-nature.jpg" }) {
       ...fluidImage
     }
-    imageLandscape: file(relativePath: { eq: "DSC_0438-1.jpg" }) {
+    imageLandscape: file(relativePath: { eq: "home-landscape.jpg" }) {
       ...fluidImage
     }
-    imageUrban: file(relativePath: { eq: "DSC_0037.jpg" }) {
+    imageUrban: file(relativePath: { eq: "home-urban.jpg" }) {
       ...fluidImage
     }
   }
