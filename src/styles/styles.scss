@@ -7,7 +7,7 @@ $color-off-white: rgb(248, 248, 255);
 $font-big: 4rem;
 $font-medium: 2rem;
 $font-small: 1.6rem;
-$font-extra-small: 1.2rem;
+$font-extra-small: 1.3rem;
 
 $margin-huge: 10rem;
 $margin-big: 8rem;
@@ -71,7 +71,7 @@ $margin-small: 2rem;
     color: $color-secondary;
     margin-right: 2rem;
     position: relative;
-    transition: 0.5s all ease;
+    transition: 0.5s ease-in;
 
     &:hover {
       color: $color-primary;
@@ -97,8 +97,8 @@ $margin-small: 2rem;
     height: 100%;
     width: 100%;
     position: relative;
-    transition: opacity 0.5s ease;
-    transition: display 0.5s ease;
+    transition: 0.5s ease-in;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
 
     &:hover {
       opacity: 0.8;
@@ -140,19 +140,17 @@ $margin-small: 2rem;
   align-items: center;
 
   &__img {
-    background: url("../images/profile.jpg");
-    background-size: cover;
     text-align: center;
     height: 100%;
-    width: 80%;
+    width: 100%;
     justify-self: center;
-    background-position: center;
   }
+
   &__content {
     color: $color-secondary;
-    font-size: $font-small;
+    font-size: $font-extra-small;
     align-self: flex-start;
-    line-height: 3rem;
+    line-height: 2.7rem;
     justify-self: center;
     font-weight: 300;
     height: 100%;
@@ -210,7 +208,7 @@ $margin-small: 2rem;
   &__small {
     height: 100%;
     width: 100%;
-      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
   }
   &__big {
     grid-column: span 2;

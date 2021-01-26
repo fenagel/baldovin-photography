@@ -11,8 +11,6 @@ import logo from '../images/logo.png'
 library.add(fab, far, fas)
 
 
-
-
 const Navbar = () => (
   <nav className="navbar">
     <img src={logo} alt="logo" className="navbar__logo"/>
