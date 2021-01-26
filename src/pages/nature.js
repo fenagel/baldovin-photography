@@ -132,6 +132,38 @@ const NaturePage = (props) => (
           alt=""
         />
       </div>
+      <div className="page-grid__small">
+        <Img
+          fluid={props.data.imageSixteen.childImageSharp.fluid}
+          objectFit="cover"
+          objectPosition="50% 50%"	          GatsbyImageSharpFluid
+          alt=""
+        />
+      </div>
+      <div className="page-grid__small">
+        <Img
+          fluid={props.data.imageSeventeen.childImageSharp.fluid}
+          objectFit="cover"
+          objectPosition="50% 50%"	          GatsbyImageSharpFluid
+          alt=""
+        />
+      </div>
+      <div className="page-grid__small">
+        <Img
+          fluid={props.data.imageEighteen.childImageSharp.fluid}
+          objectFit="cover"
+          objectPosition="50% 50%"	          GatsbyImageSharpFluid
+          alt=""
+        />
+      </div>
+      <div className="page-grid__small">
+        <Img
+          fluid={props.data.imageNineteen.childImageSharp.fluid}
+          objectFit="cover"
+          objectPosition="50% 50%"	          GatsbyImageSharpFluid
+          alt=""
+        />
+      </div>
     </section>
   </Layout>
 )
@@ -148,49 +180,61 @@ fragment fluidImage on File {
 
 export const pageQuery = graphql`
 query {
-  imageOne: file(relativePath: { eq: "urban2.jpg" }) {
+  imageOne: file(relativePath: { eq: "nature1.jpg" }) {
     ...fluidImage
   }
-  imageTwo: file(relativePath: { eq: "home-urban.jpg" }) {
+  imageTwo: file(relativePath: { eq: "nature3.jpg" }) {
     ...fluidImage
   }
-  imageThree: file(relativePath: { eq: "urban3.jpg" }) {
+  imageThree: file(relativePath: { eq: "nature2.jpg" }) {
     ...fluidImage
   }
-  imageFour: file(relativePath: { eq: "urban4.jpg" }) {
+  imageFour: file(relativePath: { eq: "nature6.jpg" }) {
     ...fluidImage
   }
-  imageFive: file(relativePath: { eq: "urban5.jpg" }) {
+  imageFive: file(relativePath: { eq: "nature16.jpg" }) {
     ...fluidImage
   }
-  imageSix: file(relativePath: { eq: "urban8.jpg" }) {
+  imageSix: file(relativePath: { eq: "nature7.jpg" }) {
     ...fluidImage
   }
-  imageSeven: file(relativePath: { eq: "urban7.jpg" }) {
+  imageSeven: file(relativePath: { eq: "nature9.jpg" }) {
     ...fluidImage
   }
-  imageEight: file(relativePath: { eq: "urban10.jpg" }) {
+  imageEight: file(relativePath: { eq: "nature8.jpg" }) {
     ...fluidImage
   }
-  imageNine: file(relativePath: { eq: "urban14.jpg" }) {
+  imageNine: file(relativePath: { eq: "nature12.jpg" }) {
     ...fluidImage
   }
-  imageTen: file(relativePath: { eq: "urban18.jpg" }) {
+  imageTen: file(relativePath: { eq: "nature19.jpg" }) {
     ...fluidImage
   }
-  imageEleven: file(relativePath: { eq: "urban19.jpg" }) {
+  imageEleven: file(relativePath: { eq: "nature21.jpg" }) {
     ...fluidImage
   }
-  imageTwelve: file(relativePath: { eq: "urban17.jpg" }) {
+  imageTwelve: file(relativePath: { eq: "nature17.jpg" }) {
     ...fluidImage
   }
-  imageThirteen: file(relativePath: { eq: "urban16.jpg" }) {
+  imageThirteen: file(relativePath: { eq: "nature15.jpg" }) {
     ...fluidImage
   }
-  imageFourteen: file(relativePath: { eq: "urban22.jpg" }) {
+  imageFourteen: file(relativePath: { eq: "nature4.jpg" }) {
     ...fluidImage
   }
-  imageFifteen: file(relativePath: { eq: "urban21.jpg" }) {
+  imageFifteen: file(relativePath: { eq: "nature18.jpg" }) {
+    ...fluidImage
+  }
+  imageSixteen: file(relativePath: { eq: "nature13.jpg" }) {
+    ...fluidImage
+  }
+  imageSeventeen: file(relativePath: { eq: "nature11.jpg" }) {
+    ...fluidImage
+  }
+  imageEighteen: file(relativePath: { eq: "nature5.jpg" }) {
+    ...fluidImage
+  }
+  imageNineteen: file(relativePath: { eq: "nature20.jpg" }) {
     ...fluidImage
   }
 }
