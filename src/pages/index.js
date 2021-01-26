@@ -35,18 +35,6 @@ const IndexPage = (props) => (
       </div>
 
       <div className="home-grid__item">
-        <Link to="/landscape" className="home-grid__link">
-          <Img
-            fluid={props.data.imageLandscape.childImageSharp.fluid}
-            objectFit="cover"
-            objectPosition="50% 50%"
-            alt=""
-          />
-          </Link>
-          <h2 className="home-grid__item--text">Landscape</h2>
-      </div>
-
-      <div className="home-grid__item">
         <Link to="/nature" className="home-grid__link">
           <Img
             fluid={props.data.imageNature.childImageSharp.fluid}
@@ -56,6 +44,18 @@ const IndexPage = (props) => (
           />
           </Link>
           <h2 className="home-grid__item--text">Nature</h2>
+      </div>
+
+      <div className="home-grid__item">
+        <Link to="/landscape" className="home-grid__link">
+          <Img
+            fluid={props.data.imageLandscape.childImageSharp.fluid}
+            objectFit="cover"
+            objectPosition="50% 50%"
+            alt=""
+          />
+          </Link>
+          <h2 className="home-grid__item--text">Landscape</h2>
       </div>
 
     </section>
@@ -80,13 +80,13 @@ export const pageQuery = graphql`
     imagePeople: file(relativePath: { eq: "home-people.jpg" }) {
       ...fluidImage
     }
-    imageNature: file(relativePath: { eq: "home-nature.jpg" }) {
+    imageNature: file(relativePath: { eq: "nature3.jpg" }) {
       ...fluidImage
     }
     imageLandscape: file(relativePath: { eq: "home-landscape.jpg" }) {
       ...fluidImage
     }
-    imageUrban: file(relativePath: { eq: "home-urban.jpg" }) {
+    imageUrban: file(relativePath: { eq: "urban7.jpg" }) {
       ...fluidImage
     }
   }

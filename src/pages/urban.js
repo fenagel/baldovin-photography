@@ -152,7 +152,7 @@ query {
   imageOne: file(relativePath: { eq: "urban2.jpg" }) {
     ...fluidImage
   }
-  imageTwo: file(relativePath: { eq: "home-urban.jpg" }) {
+  imageTwo: file(relativePath: { eq: "urban14.jpg" }) {
     ...fluidImage
   }
   imageThree: file(relativePath: { eq: "urban3.jpg" }) {
@@ -173,7 +173,7 @@ query {
   imageEight: file(relativePath: { eq: "urban10.jpg" }) {
     ...fluidImage
   }
-  imageNine: file(relativePath: { eq: "urban14.jpg" }) {
+  imageNine: file(relativePath: { eq: "urban24.jpg" }) {
     ...fluidImage
   }
   imageTen: file(relativePath: { eq: "urban18.jpg" }) {
