@@ -9,7 +9,6 @@ import { fas } from "@fortawesome/free-solid-svg-icons"
 import logo from '../images/logo.png'
 import { slide as Menu } from 'react-burger-menu'
 
-const isMobile = window.innerWidth < 700;
 
 library.add(fab, far, fas)
 
@@ -17,7 +16,6 @@ library.add(fab, far, fas)
 const Navbar = () => (
   <nav className="navbar">
     <img src={logo} alt="logo" className="navbar__logo"/>
-    { !isMobile ? 
       <div className="navbar__pages">
         <Link to="/" className="navbar__link">Home</Link>
           <div className="navbar__gallery">
@@ -39,16 +37,16 @@ const Navbar = () => (
           </div>
         <Link to="/about" className="navbar__link">About</Link>
       </div>
-    :
-      <Menu right noOverlay width={'50%'} >
-        <a id="home" className="menu-item" href="/">Home</a>
-        <a id="people" className="menu-item" href="/people">People</a>
-        <a id="urban" className="menu-item" href="/urban">Urban</a>
-        <a id="landscape" className="menu-item" href="/landscape">Landscape</a>
-        <a id="nature" className="menu-item" href="/nature">Nature</a>
-        <a id="about" className="menu-item" href="/about">About</a>
-      </Menu>
-    }
+      <div id="navbar-burger">
+        <Menu right noOverlay width={'50%'} >
+          <a id="home" className="menu-item" href="/">Home</a>
+          <a id="people" className="menu-item" href="/people">People</a>
+          <a id="urban" className="menu-item" href="/urban">Urban</a>
+          <a id="landscape" className="menu-item" href="/landscape">Landscape</a>
+          <a id="nature" className="menu-item" href="/nature">Nature</a>
+          <a id="about" className="menu-item" href="/about">About</a>
+        </Menu>
+      </div>
   </nav>
 )
 
