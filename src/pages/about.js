@@ -1,14 +1,22 @@
 import React from "react"
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import '../styles/styles.scss'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const AboutPage = () => (
+const AboutPage = (props) => (
   <Layout>
     <SEO title="About" />
     <h1 className="page-header">About Me</h1>
     <section className="about-grid">
       <div className="about-grid__img">
+        <Img
+            fluid={props.data.profile.childImageSharp.fluid}
+            objectFit="cover"
+            objectPosition="50% 50%"	          GatsbyImageSharpFluid
+            alt=""
+          />
       </div>
 
       <div className="about-grid__content">
@@ -19,5 +27,24 @@ const AboutPage = () => (
     </section>
   </Layout>
 )
+
+
+export const fluidImage = graphql`
+fragment fluidImage on File {
+  childImageSharp {
+    fluid(maxWidth: 1000) {
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+`
+
+export const pageQuery = graphql`
+query {
+  profile: file(relativePath: { eq: "profile.jpg" }) {
+    ...fluidImage
+  }
+}
+`
 
 export default AboutPage;
