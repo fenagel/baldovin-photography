@@ -5,6 +5,7 @@ $color-white: #fff;
 $color-off-white: rgb(248, 248, 255);
 
 $font-big: 4rem;
+$font-extra-big: 7rem;
 $font-medium: 2rem;
 $font-small: 1.6rem;
 $font-extra-small: 1.3rem;
@@ -19,11 +20,12 @@ $margin-small: 2rem;
   display: grid;
   grid-template-columns:
     [main-start] minmax(5rem, 1fr) [center-start] minmax(60rem, max-content)
-    minmax(50rem, max-content) [center-end] minmax(7.5rem, 1fr) [main-end];
+    minmax(60rem, max-content) [center-end] minmax(5rem, 1fr) [main-end];
 }
 
 //Navbar
 .navbar {
+  grid-column: main-start/main-end;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,12 +35,13 @@ $margin-small: 2rem;
 
   &__logo {
     width: 20rem;
+    align-self: center;
   }
 
   &__pages {
     display: flex;
     justify-content: center;
-    left: 0;
+    align-self: center;
   }
 
   &__gallery {
@@ -79,20 +82,45 @@ $margin-small: 2rem;
   }
 }
 
+@media all and (max-width: 899px) {
+  .navbar{
+    font-size: $font-medium;
+    &__logo {
+      width: 25rem;
+    }
+  }
+}
+
+@media all and (max-width: 799px) {
+  .navbar{
+    font-size: $font-medium;
+    &__logo {
+      width: 30rem;
+    }
+  }
+}
+
+@media all and (max-width: 599px) {
+  .navbar{
+    &__logo {
+      width: 40rem;
+    }
+  }
+}
+
+
 //Homepage
 .home-grid {
-  grid-column: center-start/center-end;
   display: grid;
+  grid-column: center-start/center-end;
   grid-template-columns: repeat(2, 1fr);
   margin-top: $margin-medium;
   margin-bottom: $margin-big;
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
+  grid-gap: $margin-small;
   justify-items: center;
   align-items: center;
 
   &__item {
-    background: $color-primary;
     text-align: center;
     height: 100%;
     width: 100%;
@@ -126,6 +154,19 @@ $margin-small: 2rem;
   }
 }
 
+@media all and (max-width: 599px) {
+  .home-grid{
+
+    &__item {
+      grid-column: span 2;
+
+      &--text {
+        font-size: $font-extra-big;
+      }
+    }
+  }
+}
+
 
 //About Page
 
@@ -135,7 +176,7 @@ $margin-small: 2rem;
   display: grid;
   grid-column: center-start/center-end;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
+  grid-gap: $margin-big;
   justify-items: center;
   align-items: center;
 
@@ -148,43 +189,51 @@ $margin-small: 2rem;
 
   &__content {
     color: $color-secondary;
-    font-size: $font-extra-small;
+    font-size: $font-small;
     align-self: flex-start;
     line-height: 2.7rem;
     justify-self: center;
     font-weight: 300;
     height: 100%;
-    width: 80%;
+    width: 100%;
   }
 }
 
-// // Gallery
-// .gallery {
-//   grid-column: center-start / center-end;
-//   position: relative;
-//   display: grid;
-//   grid-template-columns: repeat(4, 1fr);
-//   grid-auto-rows: 16vw;
-//   grid-gap: 1rem;
 
-//   & > * {
-//     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
-//     grid-column: span 2;
-//     grid-row: span 2;
-//   }
+@media all and (max-width: 1000px) {
+  .about-grid{
+    grid-gap: $margin-medium;
 
-//   & > :hover {
-//     cursor: pointer;
-//   }
+    &__img {
+      grid-column: span 2;
+    }
 
-//   & > :nth-child(6n + 3),
-//   & > :nth-child(6n + 6) {
-//     grid-column: span 4;
-//     grid-row: span 2;
-//   }
-// }
+    &__content {
+      font-size: $font-medium;
+      grid-column: span 2;
+      width: 100%;
+      align-self: none;
+      line-height: 2.7rem;
+      justify-self: center;
+      font-weight: 300;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
 
-// Pages general styles
+@media all and (max-width: 500px) {
+  .about-grid{
+
+    &__content {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+  }
+}
+
+
+// Photo pages general styles
 .page-header {
   grid-column: main-start/main-end;
   font-size: $font-big;
@@ -215,5 +264,47 @@ $margin-small: 2rem;
     height: 100%;
     width: 100%;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+@media all and (max-width: 699px) {
+  .page-grid{
+
+    &__small {
+      grid-column: span 2;
+    }
+  }
+
+  .page-header {
+    font-size: $font-extra-big;
+  }
+}
+
+// Footer 
+
+.footer {
+  grid-column: main-start/main-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: $font-extra-small;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  align-self: end;
+
+  &__socials {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    a {
+      font-size: 2rem;
+      margin: 1rem;
+      color: #3b3b3b;
+      transition: 0.5s ease-in;
+      &:hover {
+        color: #84a7b4;
+      }
+    }
   }
 }
