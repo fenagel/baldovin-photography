@@ -165,4 +165,23 @@ query {
 }
 `
 
+export const query = graphql`
+
+query {
+  contentfulGallery(title: {eq: "Landscape"}) {
+    id
+    title
+    image {
+      id
+      title
+      photo {
+        fluid(quality: 90, maxWidth: 1000) {
+          src
+        }
+      }
+    }
+  }
+}
+`
+
 export default LandscapePage;
