@@ -26,14 +26,6 @@ const LandscapePage = (props) => {
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={images[18].photo.fluid}	
-          objectFit="cover"
-          objectPosition="50% 50%"	          GatsbyImageSharpFluid
-          alt=""
-        />
-      </div>
-      <div className="page-grid__small">
-        <Img
           fluid={images[1].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
@@ -43,6 +35,14 @@ const LandscapePage = (props) => {
       <div className="page-grid__small">
         <Img
           fluid={images[2].photo.fluid}	
+          objectFit="cover"
+          objectPosition="50% 50%"	          GatsbyImageSharpFluid
+          alt=""
+        />
+      </div>
+      <div className="page-grid__small">
+        <Img
+          fluid={images[3].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -58,7 +58,7 @@ const LandscapePage = (props) => {
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={images[6].photo.fluid}	
+          fluid={images[5].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -66,7 +66,7 @@ const LandscapePage = (props) => {
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={images[5].photo.fluid}	
+          fluid={images[6].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -82,7 +82,7 @@ const LandscapePage = (props) => {
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={images[12].photo.fluid}	
+          fluid={images[8].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""	
@@ -90,7 +90,7 @@ const LandscapePage = (props) => {
       </div>
       <div className="page-grid__big">
         <Img
-          fluid={images[10].photo.fluid}	
+          fluid={images[9].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -98,7 +98,7 @@ const LandscapePage = (props) => {
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={images[13].photo.fluid}	
+          fluid={images[10].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""	
@@ -106,7 +106,7 @@ const LandscapePage = (props) => {
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={images[14].photo.fluid}
+          fluid={images[11].photo.fluid}
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""	

@@ -6,7 +6,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 
-const PeoplePage = (props) => (
+const PeoplePage = (props) => {
+  const images = props.data.contentfulGallery.image
+
+  return (
     <Layout>
       <SEO title="People" />
       <h1 className="page-header">
@@ -15,7 +18,7 @@ const PeoplePage = (props) => (
       <section className="page-grid">
         <div className="page-grid__small">
           <Img
-            fluid={props.data.imageOne.childImageSharp.fluid}	
+            fluid={images[0].photo.fluid}	
             objectFit="contain"
             objectPosition="50% 50%"	          GatsbyImageSharpFluid
             alt=""
@@ -23,7 +26,7 @@ const PeoplePage = (props) => (
         </div>
         <div className="page-grid__small">
           <Img
-            fluid={props.data.imageTwo.childImageSharp.fluid}	
+            fluid={images[1].photo.fluid}	
             objectFit="cover"
             objectPosition="50% 50%"	          GatsbyImageSharpFluid
             alt=""
@@ -31,7 +34,7 @@ const PeoplePage = (props) => (
         </div>
         <div className="page-grid__small">
           <Img
-            fluid={props.data.imageThree.childImageSharp.fluid}	
+            fluid={images[2].photo.fluid}	
             objectFit="cover"
             objectPosition="50% 50%"	          GatsbyImageSharpFluid
             alt=""
@@ -39,7 +42,7 @@ const PeoplePage = (props) => (
         </div>
         <div className="page-grid__small">
           <Img
-            fluid={props.data.imageFour.childImageSharp.fluid}	
+            fluid={images[3].photo.fluid}	
             objectFit="cover"
             objectPosition="50% 50%"	          GatsbyImageSharpFluid
             alt=""
@@ -47,7 +50,7 @@ const PeoplePage = (props) => (
         </div>
         <div className="page-grid__big">
           <Img
-            fluid={props.data.imageFive.childImageSharp.fluid}	
+            fluid={images[4].photo.fluid}	
             objectFit="cover"
             objectPosition="50% 50%"	          GatsbyImageSharpFluid
             alt=""
@@ -55,7 +58,7 @@ const PeoplePage = (props) => (
         </div>
         <div className="page-grid__small">
           <Img
-            fluid={props.data.imageSix.childImageSharp.fluid}	
+            fluid={images[5].photo.fluid}	
             objectFit="cover"
             objectPosition="50% 50%"	          GatsbyImageSharpFluid
             alt=""
@@ -63,7 +66,7 @@ const PeoplePage = (props) => (
         </div>
         <div className="page-grid__small">
           <Img
-            fluid={props.data.imageSeven.childImageSharp.fluid}	
+            fluid={images[6].photo.fluid}	
             objectFit="cover"
             objectPosition="50% 50%"	          GatsbyImageSharpFluid
             alt=""
@@ -71,7 +74,7 @@ const PeoplePage = (props) => (
         </div>
         <div className="page-grid__small">
           <Img
-            fluid={props.data.imageEight.childImageSharp.fluid}	
+            fluid={images[7].photo.fluid}	
             objectFit="cover"
             objectPosition="50% 50%"	          GatsbyImageSharpFluid
             alt=""
@@ -79,7 +82,7 @@ const PeoplePage = (props) => (
         </div>
         <div className="page-grid__small">
           <Img
-            fluid={props.data.imageNine.childImageSharp.fluid}	
+            fluid={images[8].photo.fluid}	
             objectFit="cover"
             objectPosition="50% 50%"	          GatsbyImageSharpFluid
             alt=""
@@ -87,7 +90,7 @@ const PeoplePage = (props) => (
         </div>
         <div className="page-grid__small">
           <Img
-            fluid={props.data.imageTen.childImageSharp.fluid}	
+            fluid={images[9].photo.fluid}	
             objectFit="cover"
             objectPosition="50% 50%"	          GatsbyImageSharpFluid
             alt=""
@@ -95,7 +98,7 @@ const PeoplePage = (props) => (
         </div>
         <div className="page-grid__small">
           <Img
-            fluid={props.data.imageEleven.childImageSharp.fluid}
+            fluid={images[10].photo.fluid}
             objectFit="cover"
             objectPosition="50% 50%"	          GatsbyImageSharpFluid
             alt=""
@@ -103,7 +106,7 @@ const PeoplePage = (props) => (
         </div>
         <div className="page-grid__small">
           <Img
-            fluid={props.data.imageTwelve.childImageSharp.fluid}
+            fluid={images[11].photo.fluid}
             objectFit="cover"
             objectPosition="50% 50%"	          GatsbyImageSharpFluid
             alt=""
@@ -111,7 +114,7 @@ const PeoplePage = (props) => (
         </div>
         <div className="page-grid__small">
           <Img
-            fluid={props.data.imageThirteen.childImageSharp.fluid}
+            fluid={images[12].photo.fluid}
             objectFit="cover"
             objectPosition="50% 50%"	          GatsbyImageSharpFluid
             alt=""
@@ -119,58 +122,25 @@ const PeoplePage = (props) => (
         </div>
       </section>
     </Layout>
-)
-
-export const fluidImage = graphql`
-fragment fluidImage on File {
-  childImageSharp {
-    fluid(maxWidth: 1000) {
-      ...GatsbyImageSharpFluid
-    }
-  }
+  )
 }
-`
 
-export const pageQuery = graphql`
+export const query = graphql`
 query {
-  imageOne: file(relativePath: { eq: "people2.jpg" }) {
-    ...fluidImage
-  }
-  imageTwo: file(relativePath: { eq: "home-people.jpg" }) {
-    ...fluidImage
-  }
-  imageThree: file(relativePath: { eq: "people3.jpg" }) {
-    ...fluidImage
-  }
-  imageFour: file(relativePath: { eq: "people4.jpg" }) {
-    ...fluidImage
-  }
-  imageFive: file(relativePath: { eq: "people5.jpg" }) {
-    ...fluidImage
-  }
-  imageSix: file(relativePath: { eq: "people6.jpg" }) {
-    ...fluidImage
-  }
-  imageSeven: file(relativePath: { eq: "people7.jpg" }) {
-    ...fluidImage
-  }
-  imageEight: file(relativePath: { eq: "people11.jpg" }) {
-    ...fluidImage
-  }
-  imageNine: file(relativePath: { eq: "people10.jpg" }) {
-    ...fluidImage
-  }
-  imageTen: file(relativePath: { eq: "people12.jpg" }) {
-    ...fluidImage
-  }
-  imageEleven: file(relativePath: { eq: "people13.jpg" }) {
-    ...fluidImage
-  }
-  imageTwelve: file(relativePath: { eq: "people14.jpg" }) {
-    ...fluidImage
-  }
-  imageThirteen: file(relativePath: { eq: "people15.jpg" }) {
-    ...fluidImage
+  contentfulGallery(title: {eq: "People"}) {
+    title
+    id
+    image {
+      id
+      title
+      photo {
+        title
+        fluid(maxWidth: 1800, quality: 90) {
+          ...GatsbyContentfulFluid_withWebp
+          src
+        }
+      }
+    }
   }
 }
 `
