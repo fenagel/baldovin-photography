@@ -5,7 +5,10 @@ import '../styles/styles.scss'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const NaturePage = (props) => (
+const NaturePage = (props) => {
+  const images = props.data.contentfulGallery.image
+
+  return (
   <Layout>
     <SEO title="Nature" />
     <h1 className="page-header">
@@ -14,7 +17,7 @@ const NaturePage = (props) => (
     <section className="page-grid">
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageOne.childImageSharp.fluid}	
+          fluid={images[0].photo.fluid}	
           objectFit="contain"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -22,7 +25,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageTwo.childImageSharp.fluid}	
+          fluid={images[1].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -30,7 +33,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageThree.childImageSharp.fluid}	
+          fluid={images[2].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -38,7 +41,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageFour.childImageSharp.fluid}	
+          fluid={images[3].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -46,7 +49,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__big">
         <Img
-          fluid={props.data.imageFive.childImageSharp.fluid}	
+          fluid={images[4].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -54,7 +57,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageSix.childImageSharp.fluid}	
+          fluid={images[5].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -62,7 +65,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageSeven.childImageSharp.fluid}	
+          fluid={images[6].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -70,7 +73,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageEight.childImageSharp.fluid}	
+          fluid={images[7].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -78,7 +81,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageNine.childImageSharp.fluid}	
+          fluid={images[8].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -86,7 +89,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageTen.childImageSharp.fluid}	
+          fluid={images[9].photo.fluid}	
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -94,7 +97,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageEleven.childImageSharp.fluid}
+          fluid={images[10].photo.fluid}
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -102,7 +105,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageTwelve.childImageSharp.fluid}
+          fluid={images[11].photo.fluid}
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -110,7 +113,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageThirteen.childImageSharp.fluid}
+          fluid={images[12].photo.fluid}
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -118,7 +121,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageFourteen.childImageSharp.fluid}
+          fluid={images[13].photo.fluid}
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -126,7 +129,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageFifteen.childImageSharp.fluid}
+          fluid={images[14].photo.fluid}
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -134,7 +137,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageSixteen.childImageSharp.fluid}
+          fluid={images[15].photo.fluid}
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -142,7 +145,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageSeventeen.childImageSharp.fluid}
+          fluid={images[16].photo.fluid}
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -150,7 +153,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageEighteen.childImageSharp.fluid}
+          fluid={images[17].photo.fluid}
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -158,7 +161,7 @@ const NaturePage = (props) => (
       </div>
       <div className="page-grid__small">
         <Img
-          fluid={props.data.imageNineteen.childImageSharp.fluid}
+          fluid={images[18].photo.fluid}
           objectFit="cover"
           objectPosition="50% 50%"	          GatsbyImageSharpFluid
           alt=""
@@ -166,76 +169,25 @@ const NaturePage = (props) => (
       </div>
     </section>
   </Layout>
-)
-
-export const fluidImage = graphql`
-fragment fluidImage on File {
-  childImageSharp {
-    fluid(maxWidth: 1000) {
-      ...GatsbyImageSharpFluid
-    }
-  }
+  )
 }
-`
 
-export const pageQuery = graphql`
+export const query = graphql`
 query {
-  imageOne: file(relativePath: { eq: "nature1.jpg" }) {
-    ...fluidImage
-  }
-  imageTwo: file(relativePath: { eq: "nature3.jpg" }) {
-    ...fluidImage
-  }
-  imageThree: file(relativePath: { eq: "nature2.jpg" }) {
-    ...fluidImage
-  }
-  imageFour: file(relativePath: { eq: "nature6.jpg" }) {
-    ...fluidImage
-  }
-  imageFive: file(relativePath: { eq: "nature16.jpg" }) {
-    ...fluidImage
-  }
-  imageSix: file(relativePath: { eq: "nature7.jpg" }) {
-    ...fluidImage
-  }
-  imageSeven: file(relativePath: { eq: "nature9.jpg" }) {
-    ...fluidImage
-  }
-  imageEight: file(relativePath: { eq: "nature8.jpg" }) {
-    ...fluidImage
-  }
-  imageNine: file(relativePath: { eq: "nature12.jpg" }) {
-    ...fluidImage
-  }
-  imageTen: file(relativePath: { eq: "nature19.jpg" }) {
-    ...fluidImage
-  }
-  imageEleven: file(relativePath: { eq: "nature21.jpg" }) {
-    ...fluidImage
-  }
-  imageTwelve: file(relativePath: { eq: "nature17.jpg" }) {
-    ...fluidImage
-  }
-  imageThirteen: file(relativePath: { eq: "nature15.jpg" }) {
-    ...fluidImage
-  }
-  imageFourteen: file(relativePath: { eq: "nature4.jpg" }) {
-    ...fluidImage
-  }
-  imageFifteen: file(relativePath: { eq: "nature18.jpg" }) {
-    ...fluidImage
-  }
-  imageSixteen: file(relativePath: { eq: "nature13.jpg" }) {
-    ...fluidImage
-  }
-  imageSeventeen: file(relativePath: { eq: "nature11.jpg" }) {
-    ...fluidImage
-  }
-  imageEighteen: file(relativePath: { eq: "nature5.jpg" }) {
-    ...fluidImage
-  }
-  imageNineteen: file(relativePath: { eq: "nature20.jpg" }) {
-    ...fluidImage
+  contentfulGallery(title: {eq: "Nature"}) {
+    title
+    id
+    image {
+      id
+      title
+      photo {
+        title
+        fluid(maxWidth: 1800, quality: 90) {
+          ...GatsbyContentfulFluid_withWebp
+          src
+        }
+      }
+    }
   }
 }
 `
