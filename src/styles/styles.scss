@@ -19,8 +19,32 @@ $margin-small: 2rem;
 .global-grid {
   display: grid;
   grid-template-columns:
-    [main-start] minmax(5rem, 1fr) [center-start] minmax(60rem, max-content)
-    minmax(60rem, max-content) [center-end] minmax(5rem, 1fr) [main-end];
+    [main-start] minmax(5rem, 1fr) [center-start] minmax(50rem, max-content)
+    minmax(50rem, max-content) [center-end] minmax(5rem, 1fr) [main-end];
+}
+
+@media all and (max-width: 899px) {
+  .global-grid {
+    grid-template-columns:
+    [main-start] minmax(5rem, 1fr) [center-start] minmax(40rem, max-content)
+    minmax(40rem, max-content) [center-end] minmax(5rem, 1fr) [main-end];
+  }
+}
+
+@media all and (max-width: 799px) {
+  .global-grid {
+    grid-template-columns:
+    [main-start] minmax(5rem, 1fr) [center-start] minmax(30rem, max-content)
+    minmax(30rem, max-content) [center-end] minmax(5rem, 1fr) [main-end];
+  }
+}
+
+@media all and (max-width: 599px) {
+  .global-grid {
+    grid-template-columns:
+    [main-start] minmax(2.5rem, 1fr) [center-start] minmax(15rem, max-content)
+    minmax(15rem, max-content) [center-end] minmax(2.5rem, 1fr) [main-end];
+  }
 }
 
 //Navbar
@@ -94,7 +118,7 @@ $margin-small: 2rem;
   position: relative;
   width: 45px;
   height: 30px;
-  right: 36px;
+  right: 20px;
 }
 
 /* Color/shape of burger icon bars */
@@ -192,7 +216,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
       display: none;
     }
     &__logo {
-      width: 40rem;
+      width: 20rem;
     }
   }
   #navbar-burger {
@@ -254,7 +278,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
       grid-column: span 2;
 
       &--text {
-        font-size: $font-extra-big;
+        font-size: $font-big;
       }
     }
   }
@@ -332,6 +356,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
   font-size: $font-big;
   text-align: center;
   margin-bottom: $margin-medium;
+}
+
+@media all and (max-width: 599px) {
+  .page-header {
+    margin-bottom: 0;
+  }
 }
 
 
