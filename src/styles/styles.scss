@@ -42,8 +42,8 @@ $margin-small: 2rem;
 @media all and (max-width: 599px) {
   .global-grid {
     grid-template-columns:
-    [main-start] minmax(2.5rem, 1fr) [center-start] minmax(15rem, max-content)
-    minmax(15rem, max-content) [center-end] minmax(2.5rem, 1fr) [main-end];
+    [main-start] minmax(2rem, 1fr) [center-start] minmax(17rem, max-content)
+    minmax(17rem, max-content) [center-end] minmax(2rem, 1fr) [main-end];
   }
 }
 
@@ -116,9 +116,9 @@ $margin-small: 2rem;
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: relative;
-  width: 45px;
+  width: 40px;
   height: 30px;
-  right: 20px;
+  right: 15%;
 }
 
 /* Color/shape of burger icon bars */
@@ -142,7 +142,7 @@ $margin-small: 2rem;
 /* Color/shape of close button cross */
 .bm-cross {
   background: $color-secondary;
-  height: 4rem !important;
+  height: 3rem !important;
   width: 3px !important;
 }
 
@@ -216,11 +216,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
       display: none;
     }
     &__logo {
-      width: 20rem;
+      width: 17rem;
     }
   }
   #navbar-burger {
     display: block;
+  }
+
+  .bm-item {
+    font-size: $font-medium;
   }
 }
 
@@ -353,7 +357,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 // Photo pages general styles
 .page-header {
   grid-column: main-start/main-end;
-  font-size: $font-big;
+  font-size: $font-extra-big;
   text-align: center;
   margin-bottom: $margin-medium;
 }
@@ -361,6 +365,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 @media all and (max-width: 599px) {
   .page-header {
     margin-bottom: 0;
+    font-size: $font-big;
   }
 }
 
@@ -396,10 +401,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
     &__small {
       grid-column: span 2;
     }
-  }
-
-  .page-header {
-    font-size: $font-extra-big;
   }
 }
 
