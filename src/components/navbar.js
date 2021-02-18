@@ -38,7 +38,7 @@ const Navbar = () => (
         <Link to="/about" className="navbar__link">About</Link>
       </div>
       <div id="navbar-burger">
-        <Menu right noOverlay width={'50%'} >
+        <Menu right noOverlay width={'100%'} >
           <a id="home" className="menu-item" href="/">Home</a>
           <a id="people" className="menu-item" href="/people">People</a>
           <a id="urban" className="menu-item" href="/urban">Urban</a>
