@@ -23,6 +23,7 @@ $margin-small: 2rem;
     minmax(50rem, max-content) [center-end] minmax(5rem, 1fr) [main-end];
 }
 
+
 @media all and (max-width: 899px) {
   .global-grid {
     grid-template-columns:
@@ -116,15 +117,15 @@ $margin-small: 2rem;
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: relative;
-  width: 40px;
-  height: 30px;
+  width: 32px;
+  height: 20px;
   right: 15%;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: $color-secondary;
-  height: 4px !important;
+  height: 2px !important;
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -175,6 +176,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding: 2rem;
   list-style: none;
   margin-top: $margin-medium;
+  text-align: center;
 }
 
 /* Individual item */
@@ -191,26 +193,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: rgba(0, 0, 0, 0.3);
 }
 
-@media all and (max-width: 899px) {
-  .navbar{
-    font-size: $font-medium;
-    &__logo {
-      width: 25rem;
-    }
-  }
-}
 
-@media all and (max-width: 799px) {
-  .navbar{
-    font-size: $font-medium;
-    &__logo {
-      width: 30rem;
-    }
-  }
-}
-
-
-@media all and (max-width: 599px) {
+@media all and (max-width: 699px) {
   .navbar{
     &__pages {
       display: none;
@@ -231,6 +215,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 
 //Homepage
+
 .home-grid {
   display: grid;
   grid-column: center-start/center-end;
@@ -334,7 +319,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
       grid-column: span 2;
       width: 100%;
       align-self: none;
-      line-height: 2.7rem;
+      line-height: 2.5rem;
       justify-self: center;
       font-weight: 300;
       height: 100%;
@@ -343,21 +328,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
 }
 
-@media all and (max-width: 500px) {
-  .about-grid{
-
-    &__content {
-      font-size: 3rem;
-      line-height: 3rem;
-    }
-  }
-}
 
 
 // Photo pages general styles
+
 .page-header {
   grid-column: main-start/main-end;
-  font-size: $font-extra-big;
+  font-size: $font-big;
   text-align: center;
   margin-bottom: $margin-medium;
 }
@@ -365,6 +342,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 @media all and (max-width: 599px) {
   .page-header {
     margin-bottom: 0;
+    margin-top: $margin-small;
     font-size: $font-big;
   }
 }
@@ -382,16 +360,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
   justify-items: center;
   align-items: center;
 
-  &__small {
+  &__small, &__big {
     height: 100%;
     width: 100%;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
   }
   &__big {
     grid-column: span 2;
-    height: 100%;
-    width: 100%;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
 
